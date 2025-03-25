@@ -9,7 +9,9 @@ Authors@R: c(
       role = c("aut", "cre")
     )
   )
-Description: Math4753 Package of all functions
+Description: This package provide many functions, but for now, we have one to determine the optimal number of tickets 
+    to sell for overbooked flights. It calculates this using both the exact binomial method 
+    and a normal approximation with continuity correction.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
