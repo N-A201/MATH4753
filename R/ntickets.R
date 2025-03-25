@@ -3,8 +3,8 @@
 #' Calculates the number of tickets to sell given the number of seats (N),
 #' the probability that a passenger shows up (p), and the allowable overbooking probability (gamma).
 #' The function computes the optimal number of tickets using:
-#' A discrete binomial approach,
-#' A normal approximation (with continuity correction).
+#' A discrete binomial approach and,
+#' A normal approximation.
 #' It also produces two separate plots: one for the discrete objective function and one for the continuous objective.
 #'
 #' @param N Integer. Number of seats on the flight.
@@ -22,14 +22,16 @@
 #'
 #' @examples
 #' \dontrun{
-#' results <- ntickets(N = 400, gamma = 0.02, p = 0.95)
-#' print(results)
+#'   results <- ntickets(N = 400, gamma = 0.02, p = 0.95)
+#'   print(results)
 #' }
 #'
+#' @importFrom stats pbinom pnorm
+#' @importFrom graphics abline
 #' @export
 ntickets <- function(N, gamma, p) {
 
-  # Calculating optimal tickets for both
+  # Calculating optimal tickets for both methods
   nd <- NA
   nc <- NA
   for(n in N:(N+200)) {
@@ -59,7 +61,7 @@ ntickets <- function(N, gamma, p) {
   zvals <- (N + 0.5 - nvec * p) / sqrt(nvec * p * (1 - p))
   obj_continuous <- 1 - gamma - pnorm(zvals)
 
-  # Discrete objective
+  # Plot for Discrete objective
   plot(
     nvec, obj_discrete, type = "l", col = "blue",
     xlab = "Number of Tickets (n)",
@@ -68,7 +70,7 @@ ntickets <- function(N, gamma, p) {
   )
   abline(h = 0, lty = 2)
 
-  # Continuous objective
+  # Plot for Continuous objective
   plot(
     nvec, obj_continuous, type = "l", col = "red",
     xlab = "Number of Tickets (n)",
@@ -77,7 +79,7 @@ ntickets <- function(N, gamma, p) {
   )
   abline(h = 0, lty = 2)
 
-  # Return the results
+  # Return the results as a named list
   return(list(
     nd = nd,
     nc = nc,
