@@ -1,13 +1,15 @@
 Package: MATH4753
 Type: Package
-Title: Optimal Ticket Sales Package
+Title: What the Package Does (Title Case)
 Version: 0.1.0
 Authors@R: c(
-    person("Nabil", "Ahmed", email = "nabila@ou.edu", role = c("aut", "cre"))
-)
-Description: This package provides a function to determine the optimal number of tickets 
-    to sell for overbooked flights. It calculates this using both the exact binomial method 
-    and a normal approximation with continuity correction.
+    person(
+      "Nabil", "Ahmed",
+      email = "nabila@ou.edu",
+      role = c("aut", "cre")
+    )
+  )
+Description: Math4753 Package of all functions
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
