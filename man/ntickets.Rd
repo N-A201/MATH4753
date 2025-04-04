@@ -7,11 +7,11 @@
 ntickets(N, gamma, p)
 }
 \arguments{
-\item{N}{Integer. Number of seats on the flight.}
+\item{N}{Number of seats on the flight.}
 
-\item{gamma}{Numeric. Allowable probability of overbooking.}
+\item{gamma}{Allowable probability of overbooking.}
 
-\item{p}{Numeric. Probability that a passenger shows up.}
+\item{p}{Probability that a passenger shows up.}
 }
 \value{
 A named list with elements:

@@ -7,9 +7,9 @@
 #' A normal approximation.
 #' It also produces two separate plots: one for the discrete objective function and one for the continuous objective.
 #'
-#' @param N Integer. Number of seats on the flight.
-#' @param gamma Numeric. Allowable probability of overbooking.
-#' @param p Numeric. Probability that a passenger shows up.
+#' @param N Number of seats on the flight.
+#' @param gamma Allowable probability of overbooking.
+#' @param p Probability that a passenger shows up.
 #'
 #' @return A named list with elements:
 #' \describe{
