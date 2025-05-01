@@ -1,0 +1,44 @@
+---
+title: "Using the MATH4753 Package"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{MATH4753 Vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+library(MATH4753)
+set.seed(1)
+```
+
+```{r}
+x <- rbeta(30, 3, 4)
+a_vals <- seq(1, 6, length = 50)
+b_vals <- seq(1, 6, length = 50)
+result <- mymlbeta(x, a_vals, b_vals)
+result
+```
+
+```{r}
+ntickets(N = 400, gamma = 0.02, p = 0.95)
+```
+
+```{r}
+myboot2(x = rnorm(20), fun = "mean")
+```
+
+```{r}
+loglik_binom <- function(y, p) dbinom(y, size = 20, prob = p, log = TRUE)
+y <- c(3, 3, 4, 3, 4, 5, 5, 4)
+pvals <- seq(0.01, 0.5, length = 100)
+mymaxlik(loglik_binom, y, pvals)
+```
+
+```{r}
+data(mtbe_data)
+summary(mtbe_data)
+plot(mtbe_data$DevPct, mtbe_data$`MTBE-Level`,
+     main = "MTBE Level vs Development",
+     xlab = "% Developed Land", ylab = "MTBE Level (µg/L)")
+```

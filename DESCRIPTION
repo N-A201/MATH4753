@@ -1,20 +1,29 @@
 Package: MATH4753
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Statistical Tools for Inference and Simulation
 Version: 0.1.0
-Authors@R: c(
+Authors@R: 
     person(
-      "Nabil", "Ahmed",
+      given = "Nabil", 
+      family = "Ahmed",
       email = "nabila@ou.edu",
       role = c("aut", "cre")
     )
-  )
-Description: This package provide many functions, but for now, we have one to determine the optimal number of tickets 
-    to sell for overbooked flights. It calculates this using both the exact binomial method 
-    and a normal approximation with continuity correction.
+Description: A collection of statistical functions for use in MATH 4753,
+    including maximum likelihood estimation (MLE) for beta distributions,
+    overbooking simulations using discrete and normal approximations,
+    bootstrap confidence intervals, and a generic likelihood maximization plotter.
+    Includes an environmental dataset on MTBE contamination for analysis.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.3.2
 Depends: 
     R (>= 3.5)
+Imports:
+    stats,
+    graphics
+Suggests:
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
