@@ -2,10 +2,12 @@
 #'
 #' Environmental and land use data for wells tested for Methyl Tertiary-Butyl Ether (MTBE).
 #'
+#' @name mtbe_data
+#' @docType data
 #' @format A data frame with 109 rows and 16 variables:
 #' \describe{
 #'   \item{pH}{Water pH level}
-#'   \item{SpConduct}{Specific conductance (µS/cm)}
+#'   \item{SpConduct}{Specific conductance (microS/cm)}
 #'   \item{DissOxy}{Dissolved oxygen (mg/L)}
 #'   \item{RoadsPct}{Percent of watershed covered by roads}
 #'   \item{IndPct}{Percent of industrial land use}
@@ -17,9 +19,9 @@
 #'   \item{SafeYld}{Safe yield of the well (if available)}
 #'   \item{Distance}{Distance to nearest urban feature (meters)}
 #'   \item{MTBE-Detect}{Detection flag for MTBE presence}
-#'   \item{MTBE-Level}{Measured MTBE concentration (µg/L)}
-#'   \item{HouseDen}{Housing density (houses per km²)}
-#'   \item{PopDen}{Population density (people per km²)}
+#'   \item{MTBE-Level}{Measured MTBE concentration (micrograms per liter)}
+#'   \item{HouseDen}{Housing density (houses per square kilometer)}
+#'   \item{PopDen}{Population density (people per square kilometer)}
 #' }
 #'
 #' @source MTBE study dataset
@@ -29,6 +31,8 @@
 #'
 #' Measurements of DDT contamination in fish from various rivers.
 #'
+#' @name ddt
+#' @docType data
 #' @format A data frame with 108 rows and 6 variables:
 #' \describe{
 #'   \item{RIVER}{River code (e.g., "FCM")}
