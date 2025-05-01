@@ -21,6 +21,7 @@
 #' y <- c(3, 3, 4, 3, 4, 5, 5, 4)
 #' pvals <- seq(0.01, 0.5, length = 100)
 #' mymaxlik(loglik_binom, y, pvals)
+#' @importFrom graphics points axis
 #' @export
 mymaxlik <- function(lfun, x, param, ...) {
   np <- length(param)

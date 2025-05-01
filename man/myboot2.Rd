@@ -17,10 +17,16 @@ myboot2(iter = 10000, x, fun = "mean", alpha = 0.05, cx = 1.5, ...)
 
 \item{cx}{Text size for plot annotations.}
 
-\item{...}{Additional arguments passed to `hist()`.}
+\item{...}{Additional arguments passed to \code{hist()}.}
 }
 \value{
-A list with the bootstrap CI, the statistic, the original data, and all bootstrap samples (`xstat`).
+A list with:
+\describe{
+  \item{ci}{Confidence interval from the bootstrap.}
+  \item{fun}{Statistic used.}
+  \item{x}{Original data.}
+  \item{xstat}{Bootstrap replicates.}
+}
 }
 \description{
 Performs bootstrap resampling to compute confidence intervals for a statistic (mean, median, etc.)
@@ -29,4 +35,5 @@ and plots a histogram of the bootstrap distribution with CI and point estimate a
 \examples{
 set.seed(1)
 myboot2(x = rnorm(20), fun = "mean")
+
 }

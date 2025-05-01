@@ -14,6 +14,8 @@
 #'   \item{shape2_hat}{The estimated MLE for shape2 (beta).}
 #'   \item{loglik}{The value of the log-likelihood at the maximum.}
 #' }
+#' @importFrom stats dbeta
+#' @importFrom graphics persp
 #' @export
 #' @examples
 #' x <- rbeta(30, 3, 4)

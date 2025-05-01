@@ -24,3 +24,20 @@
 #'
 #' @source MTBE study dataset
 "mtbe_data"
+
+#' DDT Concentration in River Fish
+#'
+#' Measurements of DDT contamination in fish from various rivers.
+#'
+#' @format A data frame with 108 rows and 6 variables:
+#' \describe{
+#'   \item{RIVER}{River code (e.g., "FCM")}
+#'   \item{MILE}{River mile where sample was taken}
+#'   \item{SPECIES}{Species of fish (e.g., "CCATFISH")}
+#'   \item{LENGTH}{Fish length in centimeters}
+#'   \item{WEIGHT}{Fish weight in grams}
+#'   \item{DDT}{Measured DDT concentration in parts per million (ppm)}
+#' }
+#'
+#' @source Environmental field sampling study
+"ddt"
